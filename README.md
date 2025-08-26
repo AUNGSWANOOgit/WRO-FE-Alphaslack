@@ -1,37 +1,61 @@
 # Alphaslack  
 **WRO 2025 Future Engineers**
 
-**Team Members**  
+## Team Members
 - Jonathan Yeo Tze Ho  
 - Aung Swan Oo  
 - Xu Yunhe  
 
+---
+
 ## Content
 
-- [**t-photos**](./t-photos)  
+<details>
+  <summary><strong>t-photos</strong></summary>
   Team photos, including one official group picture and one fun photo of all members.  
+  [Open Folder](./t-photos)
+</details>
 
-- [**v-photos**](./v-photos)  
+<details>
+  <summary><strong>v-photos</strong></summary>
   Vehicle photos showing it from different perspectives.  
+  [Open Folder](./v-photos)
+</details>
 
-- [**video**](./video)  
+<details>
+  <summary><strong>video</strong></summary>
   Contains a file with the link to the vehicle demonstration video.  
+  [Open Folder](./video)
+</details>
 
-- [**schemes**](./schemes)  
+<details>
+  <summary><strong>schemes</strong></summary>
   Diagrams that illustrate the structure and components of the vehicle and how they are connected.  
+  [Open Folder](./schemes)
+</details>
 
-- [**src**](./src)  
+<details>
+  <summary><strong>src</strong></summary>
   Source code that runs the vehicle.  
+  [Open Folder](./src)
+</details>
 
-- [**models**](./models)  
+<details>
+  <summary><strong>models</strong></summary>
   Files used to create physical parts and add-ons for the vehicle.  
+  [Open Folder](./models)
+</details>
 
-- [**other**](./other)  
+<details>
+  <summary><strong>other</strong></summary>
   Additional files that support understanding or reproduction of the vehicle.  
   This may include setup notes, guides, or reference material.  
+  [Open Folder](./other)
+</details>
+
+---
 
 ## Introduction
-
 This repository documents the development of our autonomous vehicle for the WRO 2025 Future Engineers category.  
 It brings together all parts of the project, including team photos, vehicle design, control software, hardware diagrams, and supporting materials.  
 
@@ -40,8 +64,9 @@ It also serves as a reference for future improvements and as a record of our par
 
 ---
 
-## 1. Mobility  
+## 1. Mobility
 The vehicle uses a **two-motor configuration**: one DC motor for propulsion and one DC motor for steering.  
+
 - The propulsion motor drives the vehicle forward and backward.  
 - The steering motor adjusts the wheel angle, forming an **Ackermann-style steering system**.  
 - Both motors operate through **L298N motor drivers**, with speed and position regulated by **PWM signals** from the Raspberry Pi 5.  
@@ -54,7 +79,7 @@ A **PID control loop** regulates both propulsion and steering:
 
 ---
 
-## 2. Power  
+## 2. Power
 We use a **dual power strategy** to isolate loads:  
 - Raspberry Pi 5 + sensors powered by a **30W, 10,000 mAh USB-C power bank**  
 - Drive and steering motors powered by a **Li-Po battery** through the L298N drivers  
@@ -68,7 +93,7 @@ This separation ensures stable performance and prevents motor surges from resett
 
 ---
 
-## 3. Sensing  
+## 3. Sensing
 The sensing system integrates multiple devices for navigation:  
 - **Logitech USB webcam** for line tracking, color recognition, and higher-level obstacle perception  
 - **HC-SR04 ultrasonic sensor** for detecting obstacles directly ahead and providing short-range safety  
@@ -76,7 +101,7 @@ The sensing system integrates multiple devices for navigation:
 
 ---
 
-## 4. Obstacle Management  
+## 4. Obstacle Management
 Obstacle detection uses a **two-layer system**:  
 1. **Ultrasonic sensing** provides fast stop or slow responses when an object is detected within a threshold distance  
 2. **Vision (camera)** detects markers, blocks, and course boundaries  
@@ -88,7 +113,7 @@ The avoidance strategy is **steer-around maneuvering**. When an obstacle is dete
 
 ---
 
-## 5. Control and Computation  
+## 5. Control and Computation
 The **Raspberry Pi 5 (8GB)** serves as the central controller. It handles:  
 - Vision processing using the webcam  
 - Sensor fusion from IMU and ultrasonic inputs  
@@ -104,7 +129,7 @@ The Pi runs tasks in parallel to guarantee responsive obstacle detection while p
 
 ---
 
-## 6. Motivation  
+## 6. Motivation
 The design choices are based on reliability, simplicity, and effective use of available parts.  
 
 - **Frame and Motors:** LEGO is used for the frame and motors, providing a sturdy yet modular structure that is lightweight and easy to modify.  
@@ -117,12 +142,10 @@ These decisions result in a system that combines the modularity of LEGO mechanic
 
 ---
 
-## Development Status  
+## Development Status
 This project is **still in development**. More detailed setup instructions will be added later, including:  
 - Wiring diagrams  
 - Python dependencies and installation  
 - Script usage and workflow guides  
 
 Future updates will expand this README with full documentation as the system evolves.  
-
----
