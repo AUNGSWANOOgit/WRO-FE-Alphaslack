@@ -8,25 +8,25 @@
 
 ## Content
 
-- **t-photos**  
+- [**t-photos**](./t-photos)  
   Team photos, including one official group picture and one fun photo of all members.  
 
-- **v-photos**  
+- [**v-photos**](./v-photos)  
   Vehicle photos showing it from different perspectives.  
 
-- **video**  
+- [**video**](./video)  
   Contains a file with the link to the vehicle demonstration video.  
 
-- **schemes**  
+- [**schemes**](./schemes)  
   Diagrams that illustrate the structure and components of the vehicle and how they are connected.  
 
-- **src**  
+- [**src**](./src)  
   Source code that runs the vehicle.  
 
-- **models**  
-  Files used to create physical parts + models of the vehicle and add ons to it.
+- [**models**](./models)  
+  Files used to create physical parts and add-ons for the vehicle.  
 
-- **other**  
+- [**other**](./other)  
   Additional files that support understanding or reproduction of the vehicle.  
   This may include setup notes, guides, or reference material.  
 
