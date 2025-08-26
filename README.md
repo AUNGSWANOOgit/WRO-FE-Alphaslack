@@ -27,10 +27,6 @@
 - [**models**](./models)  
   Files used to create physical parts and add-ons for the vehicle.  
 
-- [**other**](./other)  
-  Additional files that support understanding or reproduction of the vehicle.  
-  This may include setup notes, guides, or reference material.  
-
 ---
 
 ## Introduction
