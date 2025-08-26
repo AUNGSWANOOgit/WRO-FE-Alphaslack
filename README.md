@@ -9,49 +9,27 @@
 ---
 
 ## Content
-
-<details>
-  <summary><strong>t-photos</strong></summary>
+- [**t-photos**](./t-photos)  
   Team photos, including one official group picture and one fun photo of all members.  
-  [Open Folder](./t-photos)
-</details>
 
-<details>
-  <summary><strong>v-photos</strong></summary>
+- [**v-photos**](./v-photos)  
   Vehicle photos showing it from different perspectives.  
-  [Open Folder](./v-photos)
-</details>
 
-<details>
-  <summary><strong>video</strong></summary>
+- [**video**](./video)  
   Contains a file with the link to the vehicle demonstration video.  
-  [Open Folder](./video)
-</details>
 
-<details>
-  <summary><strong>schemes</strong></summary>
+- [**schemes**](./schemes)  
   Diagrams that illustrate the structure and components of the vehicle and how they are connected.  
-  [Open Folder](./schemes)
-</details>
 
-<details>
-  <summary><strong>src</strong></summary>
+- [**src**](./src)  
   Source code that runs the vehicle.  
-  [Open Folder](./src)
-</details>
 
-<details>
-  <summary><strong>models</strong></summary>
+- [**models**](./models)  
   Files used to create physical parts and add-ons for the vehicle.  
-  [Open Folder](./models)
-</details>
 
-<details>
-  <summary><strong>other</strong></summary>
+- [**other**](./other)  
   Additional files that support understanding or reproduction of the vehicle.  
   This may include setup notes, guides, or reference material.  
-  [Open Folder](./other)
-</details>
 
 ---
 
@@ -64,7 +42,9 @@ It also serves as a reference for future improvements and as a record of our par
 
 ---
 
-## 1. Mobility
+<details>
+  <summary><strong>1. Mobility</strong></summary>
+
 The vehicle uses a **two-motor configuration**: one DC motor for propulsion and one DC motor for steering.  
 
 - The propulsion motor drives the vehicle forward and backward.  
@@ -77,9 +57,13 @@ A **PID control loop** regulates both propulsion and steering:
 
 **Trade-off:** Ackermann steering provides smooth, predictable motion and precise path tracking, but it requires a larger turning radius compared to differential drive. This reduces tight rotation ability but increases consistency during forward motion and cornering.  
 
+</details>
+
 ---
 
-## 2. Power
+<details>
+  <summary><strong>2. Power</strong></summary>
+
 We use a **dual power strategy** to isolate loads:  
 - Raspberry Pi 5 + sensors powered by a **30W, 10,000 mAh USB-C power bank**  
 - Drive and steering motors powered by a **Li-Po battery** through the L298N drivers  
@@ -91,17 +75,25 @@ We use a **dual power strategy** to isolate loads:
 
 This separation ensures stable performance and prevents motor surges from resetting the Raspberry Pi.  
 
+</details>
+
 ---
 
-## 3. Sensing
+<details>
+  <summary><strong>3. Sensing</strong></summary>
+
 The sensing system integrates multiple devices for navigation:  
 - **Logitech USB webcam** for line tracking, color recognition, and higher-level obstacle perception  
 - **HC-SR04 ultrasonic sensor** for detecting obstacles directly ahead and providing short-range safety  
 - **MPU6050 IMU** for measuring orientation and angular changes, used for tracking turns and stabilizing steering behavior  
 
+</details>
+
 ---
 
-## 4. Obstacle Management
+<details>
+  <summary><strong>4. Obstacle Management</strong></summary>
+
 Obstacle detection uses a **two-layer system**:  
 1. **Ultrasonic sensing** provides fast stop or slow responses when an object is detected within a threshold distance  
 2. **Vision (camera)** detects markers, blocks, and course boundaries  
@@ -111,13 +103,17 @@ The avoidance strategy is **steer-around maneuvering**. When an obstacle is dete
 - Current logic is **rule-based** for reliability  
 - **Machine learning models** are being tested for adaptive decision-making  
 
+</details>
+
 ---
 
-## 5. Control and Computation
+<details>
+  <summary><strong>5. Control and Computation</strong></summary>
+
 The **Raspberry Pi 5 (8GB)** serves as the central controller. It handles:  
 - Vision processing using the webcam  
 - Sensor fusion from IMU and ultrasonic inputs  
-- Control of the drive and steering motors via L298N drivers  
+- Control of the drive and steering motors via [**src**](./src)  
 
 **Connections:**  
 - USB → Webcam  
@@ -127,9 +123,13 @@ The **Raspberry Pi 5 (8GB)** serves as the central controller. It handles:
 
 The Pi runs tasks in parallel to guarantee responsive obstacle detection while processing camera input.  
 
+</details>
+
 ---
 
-## 6. Motivation
+<details>
+  <summary><strong>6. Motivation</strong></summary>
+
 The design choices are based on reliability, simplicity, and effective use of available parts.  
 
 - **Frame and Motors:** LEGO is used for the frame and motors, providing a sturdy yet modular structure that is lightweight and easy to modify.  
@@ -139,6 +139,8 @@ The design choices are based on reliability, simplicity, and effective use of av
 - **Sensing:** The Logitech webcam, HC-SR04 ultrasonic sensor, and MPU6050 IMU provide a balance of vision, distance measurement, and orientation feedback.  
 
 These decisions result in a system that combines the modularity of LEGO mechanics with the flexibility of external electronics. The design is simple, robust, and open to further improvement.  
+
+</details>
 
 ---
 
