@@ -27,6 +27,8 @@
 - [**models**](./models)  
   Files used to create physical parts and add-ons for the vehicle.  
 
+- [**otherss**](./others)  
+  Additional files such as reports and older approaches  
 ---
 
 ## Introduction
