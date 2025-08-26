@@ -30,6 +30,14 @@
   Additional files that support understanding or reproduction of the vehicle.  
   This may include setup notes, guides, or reference material.  
 
+## Introduction
+
+This repository documents the development of our autonomous vehicle for the WRO 2025 Future Engineers category.  
+It brings together all parts of the project, including team photos, vehicle design, control software, hardware diagrams, and supporting materials.  
+
+The goal of this repository is to provide a clear overview of our work, show how the vehicle was designed and built, and make it easier to follow the process from concept to demonstration.  
+It also serves as a reference for future improvements and as a record of our participation in the competition.  
+
 ---
 
 ## 1. Mobility  
