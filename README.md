@@ -6,6 +6,30 @@
 - Aung Swan Oo  
 - Xu Yunhe  
 
+## Content
+
+- **t-photos**  
+  Team photos, including one official group picture and one fun photo of all members.  
+
+- **v-photos**  
+  Vehicle photos showing it from different perspectives.  
+
+- **video**  
+  Contains a file with the link to the vehicle demonstration video.  
+
+- **schemes**  
+  Diagrams that illustrate the structure and components of the vehicle and how they are connected.  
+
+- **src**  
+  Source code that runs the vehicle.  
+
+- **models**  
+  Files used to create physical parts + models of the vehicle and add ons to it.
+
+- **other**  
+  Additional files that support understanding or reproduction of the vehicle.  
+  This may include setup notes, guides, or reference material.  
+
 ---
 
 ## 1. Mobility  
